@@ -1,0 +1,16 @@
+----- JAVA FX
+1- adiciona a classe no projeto
+2- vai no FXML, no componente textfield, adiciona uma funcao do tipo onKeyReleased e da um nome.
+	onKeyReleased="#tratarTextFieldTeste"
+3- vai no controller do view e adiciona a função.
+
+@FXML public void tratarTextFieldTeste() {
+	TextFieldFormatter fieldFormatter = new TextFieldFormatter(); 	//INSTANCIA O OBJETO DA CLASSE
+	fieldFormatter.setMask("###.###.###.###"); 			//SETA O TIPO DE MASCARA
+	fieldFormatter.setCaracteresValidos("0123456789");		//SETA QUAIS CARACTERES VALIDOS
+	fieldFormatter.setTf(ipRedeTextField);				//SETA QUAL TEXTFIELD VAI RECEBER
+	fieldFormatter.formatter();					//EXECUTA
+}
+
+
+https://www.youtube.com/watch?v=Zu2F7SnoGa8

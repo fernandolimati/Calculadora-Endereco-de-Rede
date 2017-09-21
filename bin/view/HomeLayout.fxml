@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="700.0" maxWidth="600.0" minHeight="700.0" minWidth="600.0" prefHeight="700.0" prefWidth="600.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeLayoutController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="informacoesLabel" alignment="CENTER" styleClass="label-header" text="INFORMAÇÕES DA REDE" textAlignment="CENTER" textFill="#9a9a9a" VBox.vgrow="NEVER">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <GridPane fx:id="infoGridPane" hgap="15.0" maxWidth="400.0" minWidth="400.0" prefWidth="400.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="295.0" minWidth="10.0" prefWidth="161.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="474.0" minWidth="10.0" prefWidth="224.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label styleClass="label-bright" text="Máscara Sub Rede" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="label-bright" text="Endereço de Rede" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="label-bright" text="Classe">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="label-bright" text="IP" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="label-bright" text="Endereço de Broadcast" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="label-bright" text="Bits de Subrede" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="label-bright" text="Bits de Máscara" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="label-bright" text="Máximo de Sub Rede(s)" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="label-bright" text="Hosts por Sub Rede" GridPane.rowIndex="8">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="label-bright" text="IP Range" GridPane.rowIndex="9">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="classeLabel" GridPane.columnIndex="1" />
+                  <Label fx:id="ipLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="mascaraLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="enderecoRedeLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="broadcastLabel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label fx:id="bitSubRedeLabel" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label fx:id="bitMascaraLabel" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label fx:id="naxSubRedeLabel" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Label fx:id="hostsSubRedeLabel" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                     <children>
+                        <Label fx:id="ipRangeStartLabel" />
+                        <Label fx:id="ipRangeSeparator" />
+                        <Label fx:id="ipRangeEndLabel" />
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </GridPane>
+            <TableView fx:id="tableViewSubRede" maxHeight="400.0" maxWidth="590.0" minHeight="300.0" minWidth="590.0" prefHeight="400.0" prefWidth="590.0">
+              <columns>
+                <TableColumn fx:id="colunaSubRedeNome" maxWidth="96.0" minWidth="87.0" prefWidth="96.0" resizable="false" text="Subrede" />
+                <TableColumn fx:id="colunaEndRede" maxWidth="132.0" minWidth="110.0" prefWidth="123.0" resizable="false" text="Endereço Rede" />
+                  <TableColumn fx:id="colunaBroadcast" maxWidth="121.0" minWidth="83.0" prefWidth="121.0" resizable="false" text="Broadcast" />
+                  <TableColumn fx:id="colunaIPRange" maxWidth="290.0" minWidth="250.0" prefWidth="250.0" resizable="false" text="IP Range" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="gerarPDFBtn" mnemonicParsing="false" onAction="#gerarPDFBtnClick" text="Gerar PDF">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="253.0" layoutY="10.0" mnemonicParsing="false" onAction="#sairBtnClick" text="Sair">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="5.0" />
+         </opaqueInsets>
+      </HBox>
+   </bottom>
+   <top>
+      <VBox alignment="CENTER" prefHeight="60.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label styleClass="label-header" text="CALCULADORA DE REDE" textFill="#fffb00">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0">
+               <children>
+                  <Label styleClass="label-bright" text="IP de Rede">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="ipRedeTextField" maxHeight="30.0" maxWidth="200.0" minHeight="30.0" minWidth="200.0" onKeyReleased="#ipRedeTextFieldReleased" prefHeight="30.0" prefWidth="0.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></TextField>
+                  <Label layoutX="10.0" layoutY="10.0" styleClass="label-bright" text="Bits de Máscara">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="bitMascaraTextField" layoutX="67.0" layoutY="10.0" maxHeight="30.0" maxWidth="50.0" minHeight="30.0" minWidth="50.0" onKeyReleased="#bitMascaraTextFieldReleased" prefHeight="30.0" prefWidth="0.0" />
+                  <Button fx:id="calcularBtn" mnemonicParsing="false" onAction="#calcBtnClick" styleClass="background" text="Calcular">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
